@@ -1,3 +1,9 @@
-[submodule "Hippocrates"]
-	path = Hippocrates
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest
+[submodule "External/Hippocrates"]
+	path = External/Hippocrates
 	url = https://github.com/SirRade/Hippocrates
+[submodule "External/googletest"]
+	path = External/googletest
+	url = https://github.com/google/googletest
