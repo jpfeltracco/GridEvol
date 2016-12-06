@@ -11,18 +11,30 @@ public:
     auto Reset() -> void {
         //std::cout << "Reset called" << std::endl;
     }
+
+    /**
+     * Takes in the outputs of the network, needs to pass to sim
+     */
     auto Update(const Type::neuron_values_t& networkOutputs) -> void {
         std::cout << "Update called" << std::endl;
     }
+
     auto HasFinishedTask() const -> bool {
         std::cout << "has finished?" << std::endl;
-        return false;
+        return true;
     }
+
+    /**
+     * Hopefully only called once on repopulate
+     */
     auto GetFitness() const -> Type::fitness_t {
-        //std::cout << "Get fitness called" << std::endl;
+        std::cout << "Get fitness called" << std::endl;
         return 5;
     }
 
+    /**
+     * Should get the inputs to return from the simulator
+     */
     auto ProvideNetworkWithInputs() const -> Type::neuron_values_t {
         std::cout << "Input called" << std::endl;
         std::vector<float> vec;
@@ -61,6 +73,7 @@ void start() {
 
     manager.Update();
 
+    std::cout << "repopulating" << std::endl;
     manager.Repopulate(trainingBodies);
     //Training::NeuralNetworkTrainer trainer;
 
