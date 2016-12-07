@@ -81,8 +81,5 @@ TEST_F(GridTest, test_get_surrounding)
     act.push_back(EMPTY);
     act.push_back(EMPTY);
     act.push_back(EMPTY);
-
-    grid.get_surrounding(2, 2, sur);
-
 }
 

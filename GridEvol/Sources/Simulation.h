@@ -1,17 +1,19 @@
 #include <vector>
 #include <memory>
 
-#include "Normalizable.h"
+#include "Norm.h"
 
-using Input = std::vector<Normalizable>;
+using Input = std::vector<Norm>;
 using Inputs = std::vector<Input>;
-using Output = std::vector<Normalizable>;
+using Output = std::vector<Norm>;
 using Outputs = std::vector<Output>;
 using Fitnesses = std::vector< double >;
 
 class Simulation {
 public:
-    virtual std::unique_ptr<Outputs> step(const Inputs& inputs) = 0;
+    virtual void step(const Inputs& inputs) = 0;
+
+    virtual std::unique_ptr<Outputs> get_outputs() const = 0;
 
     virtual std::size_t get_entity_num() const = 0;
     

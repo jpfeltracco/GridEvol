@@ -1,10 +1,12 @@
-class Normalizable {
+#pragma once
+
+class Norm {
 
 public:
-    Normalizable(double value,
+    Norm(double value,
                  double min,
                  double max);
-    Normalizable(double value);
+    Norm(double value);
     
     double get_value() const;
 
