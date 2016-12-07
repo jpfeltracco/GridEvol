@@ -6,12 +6,17 @@ include_directories(${PROJECT_SOURCE_DIR}/GridEvol/Tests)
 
 
 set(ALL_SOURCES
-    Sources/Normalizable.cpp
     Sources/Normalizable.h
+    Sources/Normalizable.cpp
+    Sources/Simulation.h
+    Sources/GridSimulation.h
+    Sources/GridSimulation.cpp
 )
 
 set(TEST_SOURCES
     Tests/NormalizableTest.cpp
+    Tests/EntityTest.cpp
+    Tests/GridTest.cpp
 )
 
 add_executable(Controller Mains/Controller.cpp)

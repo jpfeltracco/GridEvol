@@ -28,7 +28,7 @@ Normalizable::Normalizable(double norm_value)
  *
  * @return value held by this object.
  */
-double Normalizable::get_value() 
+double Normalizable::get_value() const
 {
     return value;
 }
