@@ -17,7 +17,7 @@ public:
 
     void Update(const Type::neuron_values_t& networkOutputs) { outputs = networkOutputs; }
 
-    bool HasFinishedTask() const { return true; }
+    bool HasFinishedTask() const { return false; }
 
     Type::fitness_t GetFitness() const { return fitness; };
 

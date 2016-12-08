@@ -31,6 +31,7 @@ std::unique_ptr<NetOutputs> HippocratesNets::process(std::unique_ptr<NetInputs> 
     manager.Update();
 
     auto output_ptr = std::make_unique<NetOutputs>();
+
     // return the new outputs
     for (auto& b : bodies) {
         output_ptr->push_back(b.get_outputs());
@@ -50,5 +51,5 @@ void HippocratesNets::update_generation(std::unique_ptr<Fitnesses> fitnesses)
 
 double HippocratesNets::get_average_fitness() const
 {
-    return manager.GetTotalFitness();
+    return manager.GetAverageFitness();
 }
